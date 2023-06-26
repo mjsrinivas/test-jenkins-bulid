@@ -1,0 +1,38 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Declarative Checkout SCM') {
+            steps {
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'mygitcred', url: 'https://github.com/mjsrinivas/test-jenkins-bulid.git']])
+            }
+        }
+        stage('Build and Unittesting') {
+            steps {
+                // Run build commands here
+               echo ('Build and Unittest')
+               git branch: 'main', credentialsId: 'mygitcred', url: 'https://github.com/mjsrinivas/test-jenkins-bulid.git'
+            }
+        }
+        stage('Test DB Interactions') {
+            steps {
+                // Run test database interactions here
+                echo ('Test db ')
+            }
+        }
+        
+        stage('Build BAR Files') {
+            steps {
+                // Run commands to build BAR files here
+                echo ('Build BAR FILES')
+            }
+        }
+        
+        stage('Deploy') {
+            steps {
+                // Run deployment commands here
+                echo ('Deployed')
+            }
+        }
+    }
+}
