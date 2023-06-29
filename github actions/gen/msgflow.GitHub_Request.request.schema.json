@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "name": {
+      "displayOrder": 1,
+      "title": "Repository name",
+      "description": "The name of the repository",
+      "display": {
+        "nameProperty": true
+      },
+      "type": "string"
+    },
+    "visibility": {
+      "displayOrder": 3,
+      "title": "Visibility",
+      "description": "The repository visibility such as public, private, or internal",
+      "enum": [
+        "private",
+        "public",
+        "internal"
+      ],
+      "type": "string"
+    },
+    "description": {
+      "displayOrder": 2,
+      "title": "Description",
+      "description": "A short description of the repository",
+      "type": "string"
+    },
+    "auto_init": {
+      "displayOrder": 4,
+      "title": "Auto init",
+      "description": "Indicates whether the repository is initialized with a minimal README",
+      "type": "boolean"
+    },
+    "gitignore_template": {
+      "displayOrder": 5,
+      "title": "Gitignore template",
+      "description": "The desired language or platform to apply to the .gitignore",
+      "type": "string"
+    },
+    "license_template": {
+      "displayOrder": 6,
+      "title": "License template",
+      "description": "The license keyword of the open source license for the repository",
+      "type": "string"
+    }
+  },
+  "title": "Repository",
+  "required": [
+    "name"
+  ],
+  "additionalProperties": false,
+  "connectorName": "github",
+  "interaction": "CREATE"
+}

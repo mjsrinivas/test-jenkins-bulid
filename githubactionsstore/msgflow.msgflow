@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ComIbmApplicationConnectorInput_github.msgnode="ComIbmApplicationConnectorInput_github.msgnode" xmlns:ComIbmFileOutput.msgnode="ComIbmFileOutput.msgnode" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:eflow="http://www.ibm.com/wbi/2005/eflow" xmlns:utility="http://www.ibm.com/wbi/2005/eflow_utility" nsURI="msgflow.msgflow" nsPrefix="msgflow.msgflow">
+  <eClassifiers xmi:type="eflow:FCMComposite" name="FCMComposite_1" nodeLayoutStyle="RECTANGLE">
+    <eSuperTypes href="http://www.ibm.com/wbi/2005/eflow#//FCMBlock"/>
+    <translation xmi:type="utility:TranslatableString" key="msgflow" bundleName="msgflow" pluginId="githubactionsstore"/>
+    <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/githubactionsstore/icons/full/obj16/msgflow.gif"/>
+    <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/githubactionsstore/icons/full/obj30/msgflow.gif"/>
+    <composition>
+      <nodes xmi:type="ComIbmApplicationConnectorInput_github.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="166,72" applicationConnectorType="github" action="CREATED_POLLER" businessObject="Commit" displayName="New commit" schemaPrefix="gen/msgflow.GitHub_Input" policyUrl="{policyactionsproject}:GitHub1" createdField="updated_at" updatedField="updated_at" timeFormat="YYYY-MM-DDTHH:mm:ss.SSSZ" timeZone="UTC" pollingInterval="1" messageSetProperty="gen/msgflow.GitHub_Input.response.schema.json">
+        <translation xmi:type="utility:ConstantString" string="GitHub Input"/>
+        <connectorProperty propertyName="RepoName" displayName="Repository" propertyValue="test-jenkins-bulid" type="parentFilter"/>
+        <connectorProperty propertyName="OwnerName" displayName="Organization" propertyValue="mjsrinivas" type="parentFilter"/>
+      </nodes>
+      <nodes xmi:type="ComIbmFileOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_5" location="414,91" outputDirectory="C:\Users\User1\IBM\ACET12\workspace\test-jenkins-bulid\test-jenkins-bulid">
+        <translation xmi:type="utility:ConstantString" string="File Output"/>
+      </nodes>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_2" targetNode="FCMComposite_1_5" sourceNode="FCMComposite_1_1" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.EOD"/>
+    </composition>
+    <propertyOrganizer/>
+    <stickyBoard/>
+  </eClassifiers>
+</ecore:EPackage>
