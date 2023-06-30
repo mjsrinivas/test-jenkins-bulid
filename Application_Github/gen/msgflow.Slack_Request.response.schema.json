@@ -1,0 +1,209 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "displayOrder": 2,
+        "title": "ID",
+        "description": "The unique channel ID",
+        "type": "string"
+      },
+      "name": {
+        "displayOrder": 1,
+        "title": "Name",
+        "type": "string"
+      },
+      "is_channel": {
+        "displayOrder": 14,
+        "title": "Is channel",
+        "description": "A boolean value indicating whether this is a channel or not",
+        "type": "boolean"
+      },
+      "created": {
+        "displayOrder": 3,
+        "title": "Created",
+        "description": "Date the channel was created. Date format is a unix timestamp",
+        "type": "string"
+      },
+      "creator": {
+        "displayOrder": 4,
+        "title": "Creator",
+        "description": "User ID of the member that created this channel",
+        "type": "string"
+      },
+      "is_archived": {
+        "displayOrder": 5,
+        "title": "Is archived",
+        "description": "A boolean value indicating whether the channel is archived or not",
+        "type": "boolean"
+      },
+      "is_general": {
+        "displayOrder": 7,
+        "title": "Is general",
+        "description": "A boolean value indicating whether the channel is general or not",
+        "type": "boolean"
+      },
+      "is_member": {
+        "displayOrder": 6,
+        "title": "Is member",
+        "description": "A boolean value indicating whether the calling member is a part of the channel or not",
+        "type": "boolean"
+      },
+      "last_read": {
+        "displayOrder": 8,
+        "title": "Last read",
+        "description": "Time stamp when the channel is last read",
+        "type": "string"
+      },
+      "latest": {
+        "displayOrder": 16,
+        "title": "Latest",
+        "description": "Information about the latest item on the channel",
+        "type": "object",
+        "properties": {
+          "user": {
+            "displayOrder": 1,
+            "title": "User",
+            "description": "User who has created the latest item. For example file, or message on the channel",
+            "type": "string"
+          },
+          "old_name": {
+            "displayOrder": 2,
+            "title": "Old name",
+            "description": "Old name of the channel",
+            "type": "string"
+          },
+          "name": {
+            "displayOrder": 3,
+            "title": "Name",
+            "description": "New name of the channel",
+            "type": "string"
+          },
+          "type": {
+            "displayOrder": 4,
+            "title": "Type",
+            "description": "Type of the latest item. For example file, or message on the channel",
+            "type": "string"
+          },
+          "subtype": {
+            "displayOrder": 5,
+            "title": "Subtype",
+            "description": "Subtype of the latest item. For example file, or message on the channel",
+            "type": "string"
+          },
+          "text": {
+            "displayOrder": 6,
+            "title": "Text",
+            "description": "Text of the latest item. For example file, or message posted on the channel",
+            "type": "string"
+          },
+          "ts": {
+            "displayOrder": 7,
+            "title": "Timestamp",
+            "description": "Specifies the latest timestamp",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "unread_count": {
+        "displayOrder": 9,
+        "title": "Unread count",
+        "description": "A full count of visible messages that the calling user has yet to read ",
+        "type": "number"
+      },
+      "unread_count_display": {
+        "displayOrder": 10,
+        "title": "Unread count display",
+        "description": "A full count of visible messages that the calling user has yet to read",
+        "type": "number"
+      },
+      "members": {
+        "displayOrder": 11,
+        "title": "Members",
+        "description": "All users belonging to the particular channel",
+        "type": "array"
+      },
+      "topic": {
+        "displayOrder": 12,
+        "title": "Topic",
+        "description": "Topic of the channel",
+        "type": "object",
+        "properties": {
+          "value": {
+            "displayOrder": 1,
+            "title": "Value",
+            "description": "Name of the current topic",
+            "type": "string"
+          },
+          "creator": {
+            "displayOrder": 2,
+            "title": "Creator",
+            "description": "The user ID of the member that created this channel",
+            "type": "string"
+          },
+          "last_set": {
+            "displayOrder": 3,
+            "title": "Last set",
+            "description": "Unix time stamp of the last set topic",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "purpose": {
+        "displayOrder": 13,
+        "title": "Purpose",
+        "description": "Purpose of the channel",
+        "type": "object",
+        "properties": {
+          "value": {
+            "displayOrder": 1,
+            "title": "Value",
+            "description": "Purpose of the channel",
+            "type": "string"
+          },
+          "creator": {
+            "displayOrder": 2,
+            "title": "Creator",
+            "description": "The user ID of the member that created the current purpose",
+            "type": "string"
+          },
+          "last_set": {
+            "displayOrder": 3,
+            "title": "last set",
+            "description": "Unix time stamp of the last set purpose",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "num_members": {
+        "displayOrder": 18,
+        "title": "Number of members",
+        "description": "Number of users belonging to the channel",
+        "type": "number"
+      },
+      "is_starred": {
+        "displayOrder": 15,
+        "title": "Is starred",
+        "description": "A boolean value indicating whether the channel is starred or not",
+        "type": "boolean"
+      },
+      "previous_names": {
+        "displayOrder": 17,
+        "title": "Previous names",
+        "description": "Previous names of the channel",
+        "type": "string"
+      }
+    },
+    "title": "channel",
+    "required": [
+      "name"
+    ],
+    "additionalProperties": false
+  },
+  "type": "array",
+  "title": "channel"
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ComIbmApplicationConnectorInput_github.msgnode="ComIbmApplicationConnectorInput_github.msgnode" xmlns:ComIbmApplicationConnectorRequest_slack.msgnode="ComIbmApplicationConnectorRequest_slack.msgnode" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:eflow="http://www.ibm.com/wbi/2005/eflow" xmlns:mbmonitor="http://www.ibm.com/wbi/2008/eflow_mbmonitor" xmlns:utility="http://www.ibm.com/wbi/2005/eflow_utility" nsURI="msgflow.msgflow" nsPrefix="msgflow.msgflow">
+  <eClassifiers xmi:type="eflow:FCMComposite" name="FCMComposite_1" nodeLayoutStyle="RECTANGLE">
+    <eSuperTypes href="http://www.ibm.com/wbi/2005/eflow#//FCMBlock"/>
+    <translation xmi:type="utility:TranslatableString" key="msgflow" bundleName="msgflow" pluginId="Application_Github"/>
+    <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/Application_Github/icons/full/obj16/msgflow.gif"/>
+    <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/Application_Github/icons/full/obj30/msgflow.gif"/>
+    <composition>
+      <nodes xmi:type="ComIbmApplicationConnectorInput_github.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_4" location="255,102" applicationConnectorType="github" action="CREATED_POLLER" businessObject="Commit" displayName="New commit" schemaPrefix="gen/msgflow.GitHub_Input" policyUrl="{policywork}:GitHub1" createdField="updated_at" updatedField="updated_at" timeFormat="YYYY-MM-DDTHH:mm:ss.SSSZ" timeZone="UTC" pollingInterval="1" messageSetProperty="gen/msgflow.GitHub_Input.response.schema.json">
+        <translation xmi:type="utility:ConstantString" string="GitHub Input"/>
+        <connectorProperty propertyName="RepoName" displayName="Repository" propertyValue="test-jenkins-bulid" type="parentFilter"/>
+        <connectorProperty propertyName="OwnerName" displayName="Organization" propertyValue="mjsrinivas" type="parentFilter"/>
+      </nodes>
+      <nodes xmi:type="ComIbmApplicationConnectorRequest_slack.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_6" location="528,107" applicationConnectorType="slack" action="RETRIEVEALL" businessObject="channel" displayName="Retrieve channels" schemaPrefix="gen/msgflow.Slack_Request" policyUrl="{policytask}:Slack1" messageSetProperty="gen/msgflow.Slack_Request.response.schema.json">
+        <filter>
+          <queryProperties limit="10" allowTruncation="false"/>
+        </filter>
+        <translation xmi:type="utility:ConstantString" string="Slack Request"/>
+        <monitorEvents eventSourceDescription="in terminal" eventSourceName="Slack Request.terminal.in" eventIdentity="Slack Request.inTerminal">
+          <eventXMLDoc xmi:type="mbmonitor:MonitorEvent">
+            <globalTransactionCorrelator/>
+            <parentTransactionCorrelator/>
+            <localTransactionCorrelator/>
+            <bitStreamData encoding="none" bitstreamContent="none"/>
+            <eventName literal="Slack Request.inTerminal"/>
+            <eventFilter dataLocation="true()" isXPath="true"/>
+          </eventXMLDoc>
+        </monitorEvents>
+      </nodes>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_2" targetNode="FCMComposite_1_6" sourceNode="FCMComposite_1_4" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+    </composition>
+    <propertyOrganizer/>
+    <stickyBoard/>
+  </eClassifiers>
+</ecore:EPackage>

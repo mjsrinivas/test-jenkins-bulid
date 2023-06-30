@@ -1,0 +1,322 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "displayOrder": 1,
+        "title": "Project ID",
+        "description": "The unique identifier for the project.",
+        "type": "string"
+      },
+      "self": {
+        "displayOrder": 2,
+        "title": "Self",
+        "description": "The URL generated for the project.",
+        "type": "string"
+      },
+      "projectTypeKey": {
+        "displayOrder": 3,
+        "title": "Project type key",
+        "description": "The project type for the project.",
+        "type": "string"
+      },
+      "projectTemplateKey": {
+        "displayOrder": 4,
+        "title": "Project template key",
+        "description": "All the templates which has been defined in documentation are not working e.g https://developer.atlassian.com/cloud/jira/platform/rest/#api-api-2-project-post",
+        "type": "string"
+      },
+      "name": {
+        "displayOrder": 5,
+        "title": "Project name",
+        "description": "Project name",
+        "type": "string"
+      },
+      "key": {
+        "displayOrder": 6,
+        "title": "Project key",
+        "description": "The project key.",
+        "type": "string"
+      },
+      "assigneeType": {
+        "displayOrder": 8,
+        "title": "Assignee type",
+        "description": "The assignee type for the project.",
+        "enum": [
+          "PROJECT_LEAD",
+          "UNASSIGNED"
+        ],
+        "type": "string"
+      },
+      "description": {
+        "displayOrder": 9,
+        "title": "Description",
+        "description": "The description for project.",
+        "type": "string"
+      },
+      "lead": {
+        "displayOrder": 10,
+        "title": "lead",
+        "description": "The lead for the project.",
+        "type": "object",
+        "properties": {
+          "self": {
+            "displayOrder": 1,
+            "title": "self",
+            "description": "The URL for the lead",
+            "type": "string"
+          },
+          "key": {
+            "displayOrder": 2,
+            "title": "key",
+            "description": "The identifier for the lead",
+            "type": "string"
+          },
+          "name": {
+            "displayOrder": 3,
+            "title": "name",
+            "description": "The name for the lead",
+            "type": "string"
+          },
+          "avatarUrls": {
+            "displayOrder": 4,
+            "title": "avatarUrls",
+            "description": "The url for the avatar",
+            "type": "object",
+            "properties": {
+              "48*48": {
+                "displayOrder": 1,
+                "title": "48*48",
+                "description": "The url for the avatar icon",
+                "type": "string"
+              },
+              "24*24": {
+                "displayOrder": 2,
+                "title": "24*24",
+                "description": "The url for the avatar icon",
+                "type": "string"
+              },
+              "16*16": {
+                "displayOrder": 3,
+                "title": "16*16",
+                "description": "The url for the avatar icon",
+                "type": "string"
+              },
+              "32*32": {
+                "displayOrder": 4,
+                "title": "32*32",
+                "description": "The url for the avatar icon",
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          },
+          "displayName": {
+            "displayOrder": 5,
+            "title": "displayName",
+            "description": "The displayName for the lead",
+            "type": "string"
+          },
+          "active": {
+            "displayOrder": 6,
+            "title": "active",
+            "description": "The active description for the lead",
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "components": {
+        "displayOrder": 11,
+        "title": "component",
+        "description": "The component for the project.",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "self": {
+              "displayOrder": 1,
+              "title": "self",
+              "description": "The URL for the components",
+              "type": "string"
+            },
+            "id": {
+              "displayOrder": 2,
+              "title": "id",
+              "description": "The unique identifier for the components",
+              "type": "string"
+            },
+            "name": {
+              "displayOrder": 3,
+              "title": "name",
+              "description": "The name for the components",
+              "type": "string"
+            },
+            "description": {
+              "displayOrder": 4,
+              "title": "description",
+              "description": "The description for the components",
+              "type": "string"
+            },
+            "isAssigneeTypeValid": {
+              "displayOrder": 5,
+              "title": "archived",
+              "description": "The isAssigneeTypeValid description",
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": false
+        },
+        "additionalItems": false
+      },
+      "issueTypes": {
+        "displayOrder": 12,
+        "title": "Issue type",
+        "description": "The type for the issue.",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "self": {
+              "displayOrder": 1,
+              "title": "self",
+              "description": "The URL for the issuetype",
+              "type": "string"
+            },
+            "id": {
+              "displayOrder": 2,
+              "title": "ID",
+              "description": "The unique identifier for the issueTYPE",
+              "type": "string"
+            },
+            "description": {
+              "displayOrder": 3,
+              "title": "Description",
+              "description": "The description for the issueTYPE",
+              "type": "string"
+            },
+            "iconUrl": {
+              "displayOrder": 4,
+              "title": "Iconurl",
+              "description": "The  Url for the icon",
+              "type": "string"
+            },
+            "name": {
+              "displayOrder": 5,
+              "title": "Name",
+              "description": "The name for the issuetype",
+              "type": "string"
+            },
+            "subtask": {
+              "displayOrder": 6,
+              "title": "Subtask",
+              "description": "The subtask for the issuetype",
+              "type": "boolean"
+            },
+            "avatarId": {
+              "displayOrder": 7,
+              "title": "avatarID",
+              "description": "The unique avatarId for the issueTYPE",
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "additionalItems": false
+      },
+      "versions": {
+        "displayOrder": 11,
+        "title": "Versions",
+        "description": "The versions for the project.",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "self": {
+              "displayOrder": 1,
+              "title": "Self",
+              "description": "The URL for the versions",
+              "type": "string"
+            },
+            "id": {
+              "displayOrder": 2,
+              "title": "ID",
+              "description": "The unique identifier for the versions",
+              "type": "string"
+            },
+            "name": {
+              "displayOrder": 3,
+              "title": "Versions name",
+              "description": "The name for the versions",
+              "type": "string"
+            },
+            "archived": {
+              "displayOrder": 4,
+              "title": "Is versions archived",
+              "description": "Is versions archived",
+              "type": "boolean"
+            },
+            "released": {
+              "displayOrder": 5,
+              "title": "Is versions released",
+              "description": "The name for the versions",
+              "type": "boolean"
+            },
+            "projectId": {
+              "displayOrder": 6,
+              "title": "Project ID",
+              "description": "The Project ID for the versions",
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "additionalItems": false
+      },
+      "avatarUrls": {
+        "displayOrder": 15,
+        "title": "avatarUrls",
+        "description": "The url for the avatar.",
+        "type": "object",
+        "properties": {
+          "48*48": {
+            "displayOrder": 1,
+            "title": "48*48",
+            "description": "The url for the avatar icon",
+            "type": "string"
+          },
+          "24*24": {
+            "displayOrder": 2,
+            "title": "24*24",
+            "description": "The url for the avatar icon",
+            "type": "string"
+          },
+          "16*16": {
+            "displayOrder": 3,
+            "title": "16*16",
+            "description": "The url for the avatar icon",
+            "type": "string"
+          },
+          "32*32": {
+            "displayOrder": 4,
+            "title": "32*32",
+            "description": "The url for the avatar icon",
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "archived": {
+        "displayOrder": 16,
+        "title": "Archived",
+        "description": "The archived description.",
+        "type": "boolean"
+      }
+    },
+    "title": "Project",
+    "additionalProperties": false
+  },
+  "type": "array",
+  "title": "Project"
+}
