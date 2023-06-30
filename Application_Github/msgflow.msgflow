@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ComIbmApplicationConnectorInput_github.msgnode="ComIbmApplicationConnectorInput_github.msgnode" xmlns:ComIbmApplicationConnectorRequest_slack.msgnode="ComIbmApplicationConnectorRequest_slack.msgnode" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:eflow="http://www.ibm.com/wbi/2005/eflow" xmlns:mbmonitor="http://www.ibm.com/wbi/2008/eflow_mbmonitor" xmlns:utility="http://www.ibm.com/wbi/2005/eflow_utility" nsURI="msgflow.msgflow" nsPrefix="msgflow.msgflow">
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ComIbmApplicationConnectorInput_github.msgnode="ComIbmApplicationConnectorInput_github.msgnode" xmlns:ComIbmApplicationConnectorRequest_slack.msgnode="ComIbmApplicationConnectorRequest_slack.msgnode" xmlns:ComIbmCompute.msgnode="ComIbmCompute.msgnode" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:eflow="http://www.ibm.com/wbi/2005/eflow" xmlns:mbmonitor="http://www.ibm.com/wbi/2008/eflow_mbmonitor" xmlns:utility="http://www.ibm.com/wbi/2005/eflow_utility"
+    nsURI="msgflow.msgflow" nsPrefix="msgflow.msgflow">
   <eClassifiers xmi:type="eflow:FCMComposite" name="FCMComposite_1" nodeLayoutStyle="RECTANGLE">
     <eSuperTypes href="http://www.ibm.com/wbi/2005/eflow#//FCMBlock"/>
     <translation xmi:type="utility:TranslatableString" key="msgflow" bundleName="msgflow" pluginId="Application_Github"/>
@@ -11,7 +12,7 @@
         <connectorProperty propertyName="RepoName" displayName="Repository" propertyValue="test-jenkins-bulid" type="parentFilter"/>
         <connectorProperty propertyName="OwnerName" displayName="Organization" propertyValue="mjsrinivas" type="parentFilter"/>
       </nodes>
-      <nodes xmi:type="ComIbmApplicationConnectorRequest_slack.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_6" location="528,107" applicationConnectorType="slack" action="RETRIEVEALL" businessObject="channel" displayName="Retrieve channels" schemaPrefix="gen/msgflow.Slack_Request" policyUrl="{policytask}:Slack1" messageSetProperty="gen/msgflow.Slack_Request.response.schema.json">
+      <nodes xmi:type="ComIbmApplicationConnectorRequest_slack.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_6" location="491,88" applicationConnectorType="slack" action="RETRIEVEALL" businessObject="channel" displayName="Retrieve channels" schemaPrefix="gen/msgflow.Slack_Request" policyUrl="{policytask}:Slack1" messageSetProperty="gen/msgflow.Slack_Request.response.schema.json">
         <filter>
           <queryProperties limit="10" allowTruncation="false"/>
         </filter>
@@ -27,7 +28,11 @@
           </eventXMLDoc>
         </monitorEvents>
       </nodes>
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_10" location="352,167" computeExpression="esql://routine/#msgflow_Compute.Main">
+        <translation xmi:type="utility:ConstantString" string="Compute"/>
+      </nodes>
       <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_2" targetNode="FCMComposite_1_6" sourceNode="FCMComposite_1_4" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_4" targetNode="FCMComposite_1_10" sourceNode="FCMComposite_1_6" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
     </composition>
     <propertyOrganizer/>
     <stickyBoard/>

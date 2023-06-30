@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><policies><policy policyName="GitHub1" policyTemplate="online_v1_basic" policyType="github"><applicationType>online</applicationType><applicationVersion>v1</applicationVersion><authenticationMethod>BASIC</authenticationMethod><credentialName>policywork_GitHub1</credentialName></policy></policies>

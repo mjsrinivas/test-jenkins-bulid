@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<policies>
+  <policy policyType="github" policyName="policy" policyTemplate="online_v1_basic">
+    <credentialName>mjsrinivas99@gmail.com</credentialName>
+    <applicationVersion>v1</applicationVersion>
+    <applicationType>online</applicationType>
+    <authenticationMethod>BASIC</authenticationMethod>
+    <endpointUrl>https://github.com/mjsrinivas/test-jenkins-bulid.git</endpointUrl>
+  </policy>
+</policies>
