@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.etools.mft.unittest.core.models.client="http:///com/ibm/etools/mft/unittest/core/models/client.ecore" xmlns:com.ibm.wbit.comptest.common.models.event="http:///com/ibm/etools/mft/unittest/common/models/event.ecore" xmlns:jms="http:///com/ibm//etools/mft/unittest/common/model2/jms" xmlns:model2="http:///com/ibm//etools/mft/unittest/common/model2" xmlns:mq="http:///com/ibm//etools/mft/unittest/common/model2/mq">
-  <com.ibm.etools.mft.unittest.core.models.client:EclipseClient iD="1688357716517-14" eventTrace="/1" clientID="1688357716517-14">
-    <scopes xsi:type="model2:FlowTestScope" name="Configuration" iD="default">
-      <testModules xsi:type="model2:TestMsgFlow" name="/Application_Github/Msgflow.msgflow" iD="1688357716517-18"/>
-      <testModules xsi:type="model2:TestAppOrLib" name="Application_Github" iD="1688357716517-19"/>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.etools.mft.unittest.core.models.client="http:///com/ibm/etools/mft/unittest/core/models/client.ecore" xmlns:com.ibm.wbit.comptest.common.models.event="http:///com/ibm/etools/mft/unittest/common/models/event.ecore" xmlns:http="http:///com/ibm//etools/mft/unittest/common/model2/http" xmlns:http_1="http:///com/ibm//etools/mft/unittest/common/model2/status" xmlns:jms="http:///com/ibm//etools/mft/unittest/common/model2/jms" xmlns:model2="http:///com/ibm//etools/mft/unittest/common/model2" xmlns:mq="http:///com/ibm//etools/mft/unittest/common/model2/mq">
+  <com.ibm.etools.mft.unittest.core.models.client:EclipseClient iD="1688359874677-63" eventTrace="/1" clientID="1688359874677-63">
+    <scopes xsi:type="model2:FlowTestScope" name="Configuration" iD="default" dirty="false">
+      <testModules xsi:type="model2:TestMsgFlow" name="/Application_Github/Msgflow.msgflow" iD="1688359874677-67">
+        <inputNodes xsi:type="http:HTTPInputNode" nodeName="HTTP Input" urlSpecifier="/path"/>
+      </testModules>
+      <testModules xsi:type="model2:TestAppOrLib" name="Application_Github" iD="1688359874677-68"/>
       <settings xsi:type="model2:FlowSettings"/>
-      <settings xsi:type="model2:DeploymentSettings"/>
+      <settings xsi:type="model2:DeploymentSettings" runtimeEnvType="Integration Servers" runtimeInstance="local^SIS^TEST_SERVER^7600"/>
       <settings xsi:type="mq:MQSettings"/>
       <settings xsi:type="jms:JMSSettings"/>
       <settings xsi:type="mq:MQMessageHeaders"/>
       <settings xsi:type="jms:JMSMessageHeaders"/>
-      <messageHeaders xsi:type="mq:MQHeader" iD="1688357716517-17" headerName="Default Header"/>
+      <messageHeaders xsi:type="mq:MQHeader" iD="1688359874677-66" headerName="Default Header"/>
       <messageHeaders xsi:type="jms:JMSHeader" headerName="Default Header"/>
     </scopes>
   </com.ibm.etools.mft.unittest.core.models.client:EclipseClient>
-  <com.ibm.wbit.comptest.common.models.event:ExecutionEventTrace iD="1688357716517-15" children="/2"/>
-  <model2:InteractiveInputNodeInvocationEvent iD="1688357716520-20" timestamp="1688357716520" msgFlow="/Application_Github/Msgflow.msgflow" testScopeID="default" nodeName="HTTP Input" nodeType="ComIbmWSInput.msgnode">
-    <request xsi:type="model2:TestMessage" iD="1688357716731-21">
+  <com.ibm.wbit.comptest.common.models.event:ExecutionEventTrace iD="1688359874677-64" children="/2"/>
+  <model2:InteractiveInputNodeInvocationEvent iD="1688359874681-69" readOnly="true" clientID="1688359874677-63" timestamp="1688359874681" children="/3 /4 /7" msgFlow="/Application_Github/Msgflow.msgflow" nodeId="FCMComposite_1_15" testScopeID="default" nodeName="HTTP Input" nodeType="ComIbmWSInput.msgnode" targetDeploymentLocationID="1688359882005-73">
+    <request xsi:type="model2:TestMessage" iD="1688359874881-70">
       <properties name="messageSource" stringValue="sourceView"/>
       <properties name="WSDL_URI"/>
       <properties name="WSDL_OPERATION_IN_NAME"/>
@@ -27,4 +29,20 @@
       <properties name="linkedFile"/>
     </request>
   </model2:InteractiveInputNodeInvocationEvent>
+  <http_1:DeploymentStatus iD="1688359882005-71" parentID="1688359874681-69" timestamp="1688359882005" log="[Info]  Begin deploying message flows&#xD;&#xA;[Info]  Deploying the message flow application&#xD;&#xA;[Info]  Flow is required to be re-deployed because file /Application_Github/.project is not in the generated BAR file.&#xD;&#xA;[Info]  Going to rebuild and deploy BAR file&#xD;&#xA;[Info]  Cleaning BAR file...&#xD;&#xA;[Info]  Rebuilding BAR file...&#xD;&#xA;[Info]  Initializing test message monitors...&#xD;&#xA;[Info]  Deploying BAR file to Integration Server...&#xD;&#xA;[Info]  Test client is ready to send and monitor messages.&#xD;&#xA;[Info]  Starting message flows&#xD;&#xA;[Info]  Message flows deployment successfully completed" status="OK" totalWork="10" worked="10" scope="/0/@scopes.0"/>
+  <com.ibm.wbit.comptest.common.models.event:StartEvent name="Starting" iD="1688359885018-85" readOnly="true" clientID="1688359874677-63" parentID="1688359874681-69" timestamp="1688359885018" invokeCommandId="1688359885017-82" children="/5 /6"/>
+  <http:HTTPInformationEvent name="Sending Message to &quot;HTTP Input&quot;" iD="1688359885018-86" readOnly="true" clientID="1688359874677-63" parentID="1688359885018-85" timestamp="1688359885018" invokeCommandId="1688359885018-83" endpoint="http://localhost:7800/path">
+    <message xsi:type="model2:TestMessage" iD="1688359874881-70">
+      <properties name="messageSource" stringValue="sourceView"/>
+      <properties name="WSDL_URI"/>
+      <properties name="WSDL_OPERATION_IN_NAME"/>
+      <properties name="WSDL_OPERATION_NAME"/>
+      <properties name="WSDL_OPERATION_OUT_NAME"/>
+      <properties name="plainText" stringValue=""/>
+      <properties name="SHOW_HEX_VIEW"/>
+      <properties name="linkedFile"/>
+    </message>
+  </http:HTTPInformationEvent>
+  <http:HTTPMonitorExceptionEvent name="Error sending message to &quot;HTTP Input&quot;" iD="1688359889967-88" readOnly="true" clientID="1688359874677-63" parentID="1688359885018-85" timestamp="1688359889967" invokeCommandId="1688359885018-83" module="/Application_Github/Msgflow.msgflow" exceptionText="HTTP request for &quot;http://localhost:7800/path&quot; returned HTTP status code 500.&#xA;Error Response:&#xA; &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&lt;SOAP-ENV:Envelope xmlns:SOAP-ENV=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;>&#xA;&lt;SOAP-ENV:Body>&#xA;&lt;SOAP-ENV:Fault>&#xA;&lt;faultcode>SOAP-ENV:Server&lt;/faultcode>&#xA;&lt;faultstring>BIP3113E: Exception detected in message flow Msgflow (integration node integration_server) &lt;/faultstring>&#xA;&lt;faultactor>http://localhost:7800/path&lt;/faultactor>&#xA;&lt;detail>&#xA;            &lt;text>Exception. BIP2230E: Error detected whilst processing a message in node 'Msgflow.HTTP Request'. : C:\ci\product-build\WMB\src\WebServices\WSLibrary\ImbWSRequestNode.cpp: 888: ImbWSRequestNode::evaluate: ComIbmWSRequestNode: Msgflow#FCMComposite_1_14&#xA;BIP3162S: An HTTP error occurred. The HTTP Request-Line was: 'POST / HTTP/1.1&#xA;: C:\ci\product-build\WMB\src\WebServices\WSLibrary\ImbWSRequestNode.cpp: 794: ImbWSRequestNode::evaluate: : &#xA;BIP3152S: Socket error detected whilst invoking Web service located at host localhost, port 8080, path /. : C:\ci\product-build\WMB\src\WebServices\WSBase\ImbWSRequest.cpp: 726: Imb::WSRequest::makeWSRequest: : &#xA;BIP3150S: A socket error occurred. Operation: ::connect::select(). Error Code: 10061. Error Text: No connection could be made because the target machine actively refused it.&#xA;: C:\ci\product-build\WMB\src\CommonServices\ImbBasicSocket.cpp: 728: ImbBasicSocket::connectTimeout: : &lt;/text>&#xA;         &lt;/detail>&#xA;&lt;/SOAP-ENV:Fault>&#xA;&lt;/SOAP-ENV:Body>&#xA;&lt;/SOAP-ENV:Envelope>. " endpoint="http://localhost:7800/path"/>
+  <com.ibm.wbit.comptest.common.models.event:EndEvent name="Stopped" iD="1688359889967-89" readOnly="true" clientID="1688359874677-63" parentID="1688359874681-69" timestamp="1688359889967" invokeCommandId="1688359885018-83"/>
 </xmi:XMI>
