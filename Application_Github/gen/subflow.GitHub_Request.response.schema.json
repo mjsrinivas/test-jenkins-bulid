@@ -1,480 +1,480 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "items": {
-    "type": "object",
-    "properties": {
-      "sha": {
-        "displayOrder": 2,
-        "title": "SHA",
-        "description": "The SHA or branch from which to start listing the commits. The repository’s default branch is main.",
-        "type": "string"
-      },
-      "author": {
-        "displayOrder": 4,
-        "title": "Author",
-        "description": " ",
-        "type": "object",
-        "properties": {
-          "login": {
-            "displayOrder": 1,
-            "title": "Login",
-            "type": "string"
-          },
-          "id": {
-            "displayOrder": 2,
-            "title": "ID",
-            "type": "number"
-          },
-          "node_id": {
-            "displayOrder": 3,
-            "title": "Node ID",
-            "type": "string"
-          },
-          "avatar_url": {
-            "displayOrder": 4,
-            "title": "Avatar URL",
-            "type": "string"
-          },
-          "gravatar_id": {
-            "displayOrder": 5,
-            "title": "Gravatar ID",
-            "type": "string"
-          },
-          "url": {
-            "displayOrder": 6,
-            "title": "URL",
-            "type": "string"
-          },
-          "html_url": {
-            "displayOrder": 7,
-            "title": "HTML URL",
-            "type": "string"
-          },
-          "followers_url": {
-            "displayOrder": 8,
-            "title": "Followers URL",
-            "type": "string"
-          },
-          "following_url": {
-            "displayOrder": 9,
-            "title": "Following URL",
-            "type": "string"
-          },
-          "gists_url": {
-            "displayOrder": 10,
-            "title": "Gists URL",
-            "type": "string"
-          },
-          "starred_url": {
-            "displayOrder": 11,
-            "title": "Starred URL",
-            "type": "string"
-          },
-          "subscriptions_url": {
-            "displayOrder": 12,
-            "title": "Subscriptions URL",
-            "type": "string"
-          },
-          "organizations_url": {
-            "displayOrder": 13,
-            "title": "Organizations URL",
-            "type": "string"
-          },
-          "repos_url": {
-            "displayOrder": 14,
-            "title": "Repos URL",
-            "type": "string"
-          },
-          "events_url": {
-            "displayOrder": 15,
-            "title": "Events URL",
-            "type": "string"
-          },
-          "received_events_url": {
-            "displayOrder": 16,
-            "title": "Received events URL",
-            "type": "string"
-          },
-          "type1": {
-            "displayOrder": 17,
-            "title": "Type",
-            "type": "string"
-          },
-          "site_admin": {
-            "displayOrder": 18,
-            "title": "Site admin",
-            "type": "boolean"
-          }
-        },
-        "additionalProperties": false
-      },
-      "url": {
-        "displayOrder": 9,
-        "title": "URL",
-        "type": "string"
-      },
-      "node_id": {
-        "displayOrder": 10,
-        "title": "Node ID",
-        "type": "string"
-      },
-      "html_url": {
-        "displayOrder": 11,
-        "title": "HTML URL",
-        "type": "string"
-      },
-      "comments_url": {
-        "displayOrder": 12,
-        "title": "Comments URL",
-        "type": "string"
-      },
-      "commit": {
-        "displayOrder": 13,
-        "title": "Commit",
-        "type": "object",
-        "properties": {
-          "url": {
-            "displayOrder": 1,
-            "title": "URL",
-            "type": "string"
-          },
-          "author": {
-            "displayOrder": 2,
-            "title": "Author",
-            "type": "object",
-            "properties": {
-              "name": {
-                "displayOrder": 1,
-                "title": "Name",
-                "type": "string"
-              },
-              "email": {
-                "displayOrder": 2,
-                "title": "Email",
-                "type": "string"
-              },
-              "date": {
-                "displayOrder": 3,
-                "title": "Date",
-                "type": "string"
-              }
-            },
-            "additionalProperties": false
-          },
-          "committer": {
-            "displayOrder": 3,
-            "title": "Committer",
-            "type": "object",
-            "properties": {
-              "name": {
-                "displayOrder": 1,
-                "title": "Name",
-                "type": "string"
-              },
-              "email": {
-                "displayOrder": 2,
-                "title": "Email",
-                "type": "string"
-              },
-              "date": {
-                "displayOrder": 3,
-                "title": "Date",
-                "type": "string"
-              }
-            },
-            "additionalProperties": false
-          },
-          "message": {
-            "displayOrder": 4,
-            "title": "Message",
-            "display": {
-              "nameProperty": true
-            },
-            "type": "string"
-          },
-          "comment_count": {
-            "displayOrder": 5,
-            "title": "Comment count",
-            "type": "number"
-          },
-          "tree": {
-            "displayOrder": 6,
-            "title": "Tree",
-            "type": "object",
-            "properties": {
-              "sha": {
-                "displayOrder": 1,
-                "title": "SHA",
-                "type": "string"
-              },
-              "url": {
-                "displayOrder": 2,
-                "title": "URL",
-                "type": "string"
-              }
-            },
-            "additionalProperties": false
-          },
-          "verification": {
-            "displayOrder": 7,
-            "title": "Verification",
-            "type": "object",
-            "properties": {
-              "verified": {
-                "displayOrder": 1,
-                "title": "Verified",
-                "type": "string"
-              },
-              "reason": {
-                "displayOrder": 2,
-                "title": "Reason",
-                "type": "string"
-              },
-              "signature": {
-                "displayOrder": 3,
-                "title": "Signature",
-                "type": "string"
-              },
-              "payload": {
-                "displayOrder": 4,
-                "title": "Payload",
-                "type": "string"
-              }
-            },
-            "additionalProperties": false
-          }
-        },
-        "additionalProperties": false
-      },
-      "committer": {
-        "displayOrder": 14,
-        "title": "Committer",
-        "description": "Committer",
-        "type": "object",
-        "properties": {
-          "login": {
-            "displayOrder": 1,
-            "title": "Login",
-            "type": "string"
-          },
-          "id": {
-            "displayOrder": 2,
-            "title": "ID",
-            "type": "number"
-          },
-          "node_id": {
-            "displayOrder": 3,
-            "title": "Node ID",
-            "type": "string"
-          },
-          "avatar_url": {
-            "displayOrder": 4,
-            "title": "Avatar URL",
-            "type": "string"
-          },
-          "gravatar_id": {
-            "displayOrder": 5,
-            "title": "Gravatar ID",
-            "type": "string"
-          },
-          "url": {
-            "displayOrder": 6,
-            "title": "URL",
-            "type": "string"
-          },
-          "html_url": {
-            "displayOrder": 7,
-            "title": "HTML URL",
-            "type": "string"
-          },
-          "followers_url": {
-            "displayOrder": 8,
-            "title": "Followers URL",
-            "type": "string"
-          },
-          "following_url": {
-            "displayOrder": 9,
-            "title": "Following URL",
-            "type": "string"
-          },
-          "gists_url": {
-            "displayOrder": 10,
-            "title": "Gists URL",
-            "type": "string"
-          },
-          "starred_url": {
-            "displayOrder": 11,
-            "title": "Starred URL",
-            "type": "string"
-          },
-          "subscriptions_url": {
-            "displayOrder": 12,
-            "title": "Subscriptions URL",
-            "type": "string"
-          },
-          "organizations_url": {
-            "displayOrder": 13,
-            "title": "Organizations URL",
-            "type": "string"
-          },
-          "repos_url": {
-            "displayOrder": 14,
-            "title": "Repos URL",
-            "type": "string"
-          },
-          "events_url": {
-            "displayOrder": 15,
-            "title": "Events URL",
-            "type": "string"
-          },
-          "received_events_url": {
-            "displayOrder": 16,
-            "title": "Received events URL",
-            "type": "string"
-          },
-          "type1": {
-            "displayOrder": 17,
-            "title": "Type",
-            "type": "string"
-          },
-          "site_admin": {
-            "displayOrder": 18,
-            "title": "Site admin",
-            "type": "boolean"
-          }
-        },
-        "additionalProperties": false
-      },
-      "parents": {
-        "displayOrder": 15,
-        "title": "Parents",
-        "type": "array",
-        "items": {
-          "type": "object",
-          "properties": {
-            "sha": {
-              "displayOrder": 1,
-              "title": "SHA",
-              "type": "string"
-            },
-            "url": {
-              "displayOrder": 2,
-              "title": "URL",
-              "type": "string"
-            },
-            "html_url": {
-              "displayOrder": 3,
-              "title": "HTML URL",
-              "type": "string"
-            }
-          },
-          "additionalProperties": false
-        },
-        "additionalItems": false
-      },
-      "stats": {
-        "displayOrder": 16,
-        "title": "Stats",
-        "type": "object",
-        "properties": {
-          "additions": {
-            "displayOrder": 1,
-            "title": "Additions",
-            "type": "number"
-          },
-          "deletions": {
-            "displayOrder": 2,
-            "title": "Deletions",
-            "type": "number"
-          },
-          "total": {
-            "displayOrder": 3,
-            "title": "Total",
-            "type": "number"
-          }
-        },
-        "additionalProperties": false
-      },
-      "files": {
-        "displayOrder": 17,
-        "title": "Files",
-        "type": "array",
-        "items": {
-          "type": "object",
-          "properties": {
-            "sha": {
-              "displayOrder": 1,
-              "title": "SHA",
-              "type": "string"
-            },
-            "filename": {
-              "displayOrder": 2,
-              "title": "File name",
-              "type": "string"
-            },
-            "status": {
-              "displayOrder": 3,
-              "title": "Status",
-              "enum": [
-                "added",
-                "removed",
-                "modified",
-                "renamed",
-                "copied",
-                "changed",
-                "unchanged"
-              ],
-              "type": "string"
-            },
-            "additions": {
-              "displayOrder": 4,
-              "title": "Additions",
-              "type": "number"
-            },
-            "deletions": {
-              "displayOrder": 5,
-              "title": "Deletions",
-              "type": "number"
-            },
-            "changes": {
-              "displayOrder": 6,
-              "title": "Changes",
-              "type": "number"
-            },
-            "blob_url": {
-              "displayOrder": 7,
-              "title": "Blob URL",
-              "type": "string"
-            },
-            "raw_url": {
-              "displayOrder": 8,
-              "title": "Raw URL",
-              "type": "string"
-            },
-            "contents_url": {
-              "displayOrder": 9,
-              "title": "Contents URL",
-              "type": "string"
-            },
-            "patch": {
-              "displayOrder": 10,
-              "title": "Patch",
-              "type": "string"
-            },
-            "previous_filename": {
-              "displayOrder": 11,
-              "title": "Previous file name",
-              "type": "string"
-            }
-          },
-          "additionalProperties": false
-        },
-        "additionalItems": false
-      }
-    },
-    "title": "Commit",
-    "additionalProperties": false
-  },
-  "type": "array",
-  "title": "Commit"
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"items": {
+		"type": "object",
+		"properties": {
+			"sha": {
+				"displayOrder": 2,
+				"title": "SHA",
+				"description": "The SHA or branch from which to start listing the commits. The repository’s default branch is main.",
+				"type": "string"
+			},
+			"author": {
+				"displayOrder": 4,
+				"title": "Author",
+				"description": " ",
+				"type": "object",
+				"properties": {
+					"login": {
+						"displayOrder": 1,
+						"title": "Login",
+						"type": "string"
+					},
+					"id": {
+						"displayOrder": 2,
+						"title": "ID",
+						"type": "number"
+					},
+					"node_id": {
+						"displayOrder": 3,
+						"title": "Node ID",
+						"type": "string"
+					},
+					"avatar_url": {
+						"displayOrder": 4,
+						"title": "Avatar URL",
+						"type": "string"
+					},
+					"gravatar_id": {
+						"displayOrder": 5,
+						"title": "Gravatar ID",
+						"type": "string"
+					},
+					"url": {
+						"displayOrder": 6,
+						"title": "URL",
+						"type": "string"
+					},
+					"html_url": {
+						"displayOrder": 7,
+						"title": "HTML URL",
+						"type": "string"
+					},
+					"followers_url": {
+						"displayOrder": 8,
+						"title": "Followers URL",
+						"type": "string"
+					},
+					"following_url": {
+						"displayOrder": 9,
+						"title": "Following URL",
+						"type": "string"
+					},
+					"gists_url": {
+						"displayOrder": 10,
+						"title": "Gists URL",
+						"type": "string"
+					},
+					"starred_url": {
+						"displayOrder": 11,
+						"title": "Starred URL",
+						"type": "string"
+					},
+					"subscriptions_url": {
+						"displayOrder": 12,
+						"title": "Subscriptions URL",
+						"type": "string"
+					},
+					"organizations_url": {
+						"displayOrder": 13,
+						"title": "Organizations URL",
+						"type": "string"
+					},
+					"repos_url": {
+						"displayOrder": 14,
+						"title": "Repos URL",
+						"type": "string"
+					},
+					"events_url": {
+						"displayOrder": 15,
+						"title": "Events URL",
+						"type": "string"
+					},
+					"received_events_url": {
+						"displayOrder": 16,
+						"title": "Received events URL",
+						"type": "string"
+					},
+					"type1": {
+						"displayOrder": 17,
+						"title": "Type",
+						"type": "string"
+					},
+					"site_admin": {
+						"displayOrder": 18,
+						"title": "Site admin",
+						"type": "boolean"
+					}
+				},
+				"additionalProperties": false
+			},
+			"url": {
+				"displayOrder": 9,
+				"title": "URL",
+				"type": "string"
+			},
+			"node_id": {
+				"displayOrder": 10,
+				"title": "Node ID",
+				"type": "string"
+			},
+			"html_url": {
+				"displayOrder": 11,
+				"title": "HTML URL",
+				"type": "string"
+			},
+			"comments_url": {
+				"displayOrder": 12,
+				"title": "Comments URL",
+				"type": "string"
+			},
+			"commit": {
+				"displayOrder": 13,
+				"title": "Commit",
+				"type": "object",
+				"properties": {
+					"url": {
+						"displayOrder": 1,
+						"title": "URL",
+						"type": "string"
+					},
+					"author": {
+						"displayOrder": 2,
+						"title": "Author",
+						"type": "object",
+						"properties": {
+							"name": {
+								"displayOrder": 1,
+								"title": "Name",
+								"type": "string"
+							},
+							"email": {
+								"displayOrder": 2,
+								"title": "Email",
+								"type": "string"
+							},
+							"date": {
+								"displayOrder": 3,
+								"title": "Date",
+								"type": "string"
+							}
+						},
+						"additionalProperties": false
+					},
+					"committer": {
+						"displayOrder": 3,
+						"title": "Committer",
+						"type": "object",
+						"properties": {
+							"name": {
+								"displayOrder": 1,
+								"title": "Name",
+								"type": "string"
+							},
+							"email": {
+								"displayOrder": 2,
+								"title": "Email",
+								"type": "string"
+							},
+							"date": {
+								"displayOrder": 3,
+								"title": "Date",
+								"type": "string"
+							}
+						},
+						"additionalProperties": false
+					},
+					"message": {
+						"displayOrder": 4,
+						"title": "Message",
+						"display": {
+							"nameProperty": true
+						},
+						"type": "string"
+					},
+					"comment_count": {
+						"displayOrder": 5,
+						"title": "Comment count",
+						"type": "number"
+					},
+					"tree": {
+						"displayOrder": 6,
+						"title": "Tree",
+						"type": "object",
+						"properties": {
+							"sha": {
+								"displayOrder": 1,
+								"title": "SHA",
+								"type": "string"
+							},
+							"url": {
+								"displayOrder": 2,
+								"title": "URL",
+								"type": "string"
+							}
+						},
+						"additionalProperties": false
+					},
+					"verification": {
+						"displayOrder": 7,
+						"title": "Verification",
+						"type": "object",
+						"properties": {
+							"verified": {
+								"displayOrder": 1,
+								"title": "Verified",
+								"type": "string"
+							},
+							"reason": {
+								"displayOrder": 2,
+								"title": "Reason",
+								"type": "string"
+							},
+							"signature": {
+								"displayOrder": 3,
+								"title": "Signature",
+								"type": "string"
+							},
+							"payload": {
+								"displayOrder": 4,
+								"title": "Payload",
+								"type": "string"
+							}
+						},
+						"additionalProperties": false
+					}
+				},
+				"additionalProperties": false
+			},
+			"committer": {
+				"displayOrder": 14,
+				"title": "Committer",
+				"description": "Committer",
+				"type": "object",
+				"properties": {
+					"login": {
+						"displayOrder": 1,
+						"title": "Login",
+						"type": "string"
+					},
+					"id": {
+						"displayOrder": 2,
+						"title": "ID",
+						"type": "number"
+					},
+					"node_id": {
+						"displayOrder": 3,
+						"title": "Node ID",
+						"type": "string"
+					},
+					"avatar_url": {
+						"displayOrder": 4,
+						"title": "Avatar URL",
+						"type": "string"
+					},
+					"gravatar_id": {
+						"displayOrder": 5,
+						"title": "Gravatar ID",
+						"type": "string"
+					},
+					"url": {
+						"displayOrder": 6,
+						"title": "URL",
+						"type": "string"
+					},
+					"html_url": {
+						"displayOrder": 7,
+						"title": "HTML URL",
+						"type": "string"
+					},
+					"followers_url": {
+						"displayOrder": 8,
+						"title": "Followers URL",
+						"type": "string"
+					},
+					"following_url": {
+						"displayOrder": 9,
+						"title": "Following URL",
+						"type": "string"
+					},
+					"gists_url": {
+						"displayOrder": 10,
+						"title": "Gists URL",
+						"type": "string"
+					},
+					"starred_url": {
+						"displayOrder": 11,
+						"title": "Starred URL",
+						"type": "string"
+					},
+					"subscriptions_url": {
+						"displayOrder": 12,
+						"title": "Subscriptions URL",
+						"type": "string"
+					},
+					"organizations_url": {
+						"displayOrder": 13,
+						"title": "Organizations URL",
+						"type": "string"
+					},
+					"repos_url": {
+						"displayOrder": 14,
+						"title": "Repos URL",
+						"type": "string"
+					},
+					"events_url": {
+						"displayOrder": 15,
+						"title": "Events URL",
+						"type": "string"
+					},
+					"received_events_url": {
+						"displayOrder": 16,
+						"title": "Received events URL",
+						"type": "string"
+					},
+					"type1": {
+						"displayOrder": 17,
+						"title": "Type",
+						"type": "string"
+					},
+					"site_admin": {
+						"displayOrder": 18,
+						"title": "Site admin",
+						"type": "boolean"
+					}
+				},
+				"additionalProperties": false
+			},
+			"parents": {
+				"displayOrder": 15,
+				"title": "Parents",
+				"type": "array",
+				"items": {
+					"type": "object",
+					"properties": {
+						"sha": {
+							"displayOrder": 1,
+							"title": "SHA",
+							"type": "string"
+						},
+						"url": {
+							"displayOrder": 2,
+							"title": "URL",
+							"type": "string"
+						},
+						"html_url": {
+							"displayOrder": 3,
+							"title": "HTML URL",
+							"type": "string"
+						}
+					},
+					"additionalProperties": false
+				},
+				"additionalItems": false
+			},
+			"stats": {
+				"displayOrder": 16,
+				"title": "Stats",
+				"type": "object",
+				"properties": {
+					"additions": {
+						"displayOrder": 1,
+						"title": "Additions",
+						"type": "number"
+					},
+					"deletions": {
+						"displayOrder": 2,
+						"title": "Deletions",
+						"type": "number"
+					},
+					"total": {
+						"displayOrder": 3,
+						"title": "Total",
+						"type": "number"
+					}
+				},
+				"additionalProperties": false
+			},
+			"files": {
+				"displayOrder": 17,
+				"title": "Files",
+				"type": "array",
+				"items": {
+					"type": "object",
+					"properties": {
+						"sha": {
+							"displayOrder": 1,
+							"title": "SHA",
+							"type": "string"
+						},
+						"filename": {
+							"displayOrder": 2,
+							"title": "File name",
+							"type": "string"
+						},
+						"status": {
+							"displayOrder": 3,
+							"title": "Status",
+							"enum": [
+								"added",
+								"removed",
+								"modified",
+								"renamed",
+								"copied",
+								"changed",
+								"unchanged"
+							],
+							"type": "string"
+						},
+						"additions": {
+							"displayOrder": 4,
+							"title": "Additions",
+							"type": "number"
+						},
+						"deletions": {
+							"displayOrder": 5,
+							"title": "Deletions",
+							"type": "number"
+						},
+						"changes": {
+							"displayOrder": 6,
+							"title": "Changes",
+							"type": "number"
+						},
+						"blob_url": {
+							"displayOrder": 7,
+							"title": "Blob URL",
+							"type": "string"
+						},
+						"raw_url": {
+							"displayOrder": 8,
+							"title": "Raw URL",
+							"type": "string"
+						},
+						"contents_url": {
+							"displayOrder": 9,
+							"title": "Contents URL",
+							"type": "string"
+						},
+						"patch": {
+							"displayOrder": 10,
+							"title": "Patch",
+							"type": "string"
+						},
+						"previous_filename": {
+							"displayOrder": 11,
+							"title": "Previous file name",
+							"type": "string"
+						}
+					},
+					"additionalProperties": false
+				},
+				"additionalItems": false
+			}
+		},
+		"title": "Commit",
+		"additionalProperties": false
+	},
+	"type": "array",
+	"title": "Commit"
 }

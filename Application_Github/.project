@@ -5,6 +5,7 @@
 	<projects>
 		<project>policytask</project>
 		<project>policywork</project>
+		<project>Application_GithubJava</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Application_Github
+Bundle-SymbolicName: Application_Github
+Bundle-Version: 1.0.0.qualifier

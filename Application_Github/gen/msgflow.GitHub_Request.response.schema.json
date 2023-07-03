@@ -1,0 +1,594 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"items": {
+		"type": "object",
+		"properties": {
+			"name": {
+				"displayOrder": 1,
+				"title": "Repository name",
+				"description": "The name of the repository",
+				"display": {
+					"nameProperty": true
+				},
+				"type": "string"
+			},
+			"visibility": {
+				"displayOrder": 3,
+				"title": "Visibility",
+				"description": "The repository visibility such as public, private, or internal",
+				"enum": [
+					"private",
+					"public",
+					"internal"
+				],
+				"type": "string"
+			},
+			"id": {
+				"displayOrder": 12,
+				"title": "ID",
+				"description": "The unique identifier of the repository",
+				"type": "number"
+			},
+			"node_id": {
+				"displayOrder": 13,
+				"title": "Node ID",
+				"type": "string"
+			},
+			"full_name": {
+				"displayOrder": 14,
+				"title": "Full name",
+				"type": "string"
+			},
+			"owner": {
+				"displayOrder": 15,
+				"title": "Owner",
+				"description": " ",
+				"type": "object",
+				"properties": {
+					"login": {
+						"displayOrder": 1,
+						"title": "Login",
+						"type": "string"
+					},
+					"id": {
+						"displayOrder": 2,
+						"title": "ID",
+						"type": "number"
+					},
+					"node_id": {
+						"displayOrder": 3,
+						"title": "Node ID",
+						"type": "string"
+					},
+					"avatar_url": {
+						"displayOrder": 4,
+						"title": "Avatar URL",
+						"type": "string"
+					},
+					"gravatar_id": {
+						"displayOrder": 5,
+						"title": "Gravatar ID",
+						"type": "string"
+					},
+					"url": {
+						"displayOrder": 6,
+						"title": "URL",
+						"type": "string"
+					},
+					"html_url": {
+						"displayOrder": 7,
+						"title": "HTML URL",
+						"type": "string"
+					},
+					"followers_url": {
+						"displayOrder": 8,
+						"title": "Followers URL",
+						"type": "string"
+					},
+					"following_url": {
+						"displayOrder": 9,
+						"title": "Following URL",
+						"type": "string"
+					},
+					"gists_url": {
+						"displayOrder": 10,
+						"title": "Gists URL",
+						"type": "string"
+					},
+					"starred_url": {
+						"displayOrder": 11,
+						"title": "Starred URL",
+						"type": "string"
+					},
+					"subscriptions_url": {
+						"displayOrder": 12,
+						"title": "Subscriptions URL",
+						"type": "string"
+					},
+					"organizations_url": {
+						"displayOrder": 13,
+						"title": "Organizations URL",
+						"type": "string"
+					},
+					"repos_url": {
+						"displayOrder": 14,
+						"title": "Repos URL",
+						"type": "string"
+					},
+					"events_url": {
+						"displayOrder": 15,
+						"title": "Events URL",
+						"type": "string"
+					},
+					"received_events_url": {
+						"displayOrder": 16,
+						"title": "Received events URL",
+						"type": "string"
+					},
+					"type1": {
+						"displayOrder": 17,
+						"title": "Type",
+						"type": "string"
+					},
+					"site_admin": {
+						"displayOrder": 18,
+						"title": "Site admin",
+						"type": "boolean"
+					}
+				},
+				"additionalProperties": false
+			},
+			"private": {
+				"displayOrder": 16,
+				"title": "Private",
+				"description": "Indicates whether the repository is private or public",
+				"type": "boolean"
+			},
+			"html_url": {
+				"displayOrder": 17,
+				"title": "HTML URL",
+				"type": "string"
+			},
+			"description": {
+				"displayOrder": 2,
+				"title": "Description",
+				"description": "A short description of the repository",
+				"type": "string"
+			},
+			"fork": {
+				"displayOrder": 19,
+				"title": "Fork",
+				"type": "boolean"
+			},
+			"url": {
+				"displayOrder": 20,
+				"title": "URL",
+				"type": "string"
+			},
+			"archive_url": {
+				"displayOrder": 21,
+				"title": "Archive URL",
+				"type": "string"
+			},
+			"assignees_url": {
+				"displayOrder": 22,
+				"title": "Assignees URL",
+				"type": "string"
+			},
+			"blobs_url": {
+				"displayOrder": 23,
+				"title": "Blobs URL",
+				"type": "string"
+			},
+			"branches_url": {
+				"displayOrder": 24,
+				"title": "Branches URL",
+				"type": "string"
+			},
+			"collaborators_url": {
+				"displayOrder": 25,
+				"title": "Collaborators URL",
+				"type": "string"
+			},
+			"comments_url": {
+				"displayOrder": 26,
+				"title": "Comments URL",
+				"type": "string"
+			},
+			"commits_url": {
+				"displayOrder": 27,
+				"title": "Commits URL",
+				"type": "string"
+			},
+			"compare_url": {
+				"displayOrder": 28,
+				"title": "Compare URL",
+				"type": "string"
+			},
+			"contents_url": {
+				"displayOrder": 29,
+				"title": "Contents URL",
+				"type": "string"
+			},
+			"contributors_url": {
+				"displayOrder": 30,
+				"title": "Contributors URL",
+				"type": "string"
+			},
+			"deployments_url": {
+				"displayOrder": 31,
+				"title": "Deployments URL",
+				"type": "string"
+			},
+			"downloads_url": {
+				"displayOrder": 32,
+				"title": "Downloads URL",
+				"type": "string"
+			},
+			"events_url": {
+				"displayOrder": 33,
+				"title": "Events URL",
+				"type": "string"
+			},
+			"forks_url": {
+				"displayOrder": 34,
+				"title": "Forks URL",
+				"type": "string"
+			},
+			"git_commits_url": {
+				"displayOrder": 35,
+				"title": "Git commits URL",
+				"type": "string"
+			},
+			"git_refs_url": {
+				"displayOrder": 36,
+				"title": "Git refs URL",
+				"type": "string"
+			},
+			"git_tags_url": {
+				"displayOrder": 37,
+				"title": "Git tags URL",
+				"type": "string"
+			},
+			"git_url": {
+				"displayOrder": 38,
+				"title": "Git URL",
+				"type": "string"
+			},
+			"issue_comment_url": {
+				"displayOrder": 39,
+				"title": "Issue comment URL",
+				"type": "string"
+			},
+			"issue_events_url": {
+				"displayOrder": 40,
+				"title": "Issue events URL",
+				"type": "string"
+			},
+			"issues_url": {
+				"displayOrder": 41,
+				"title": "Issues URL",
+				"type": "string"
+			},
+			"keys_url": {
+				"displayOrder": 42,
+				"title": "Keys URL",
+				"type": "string"
+			},
+			"labels_url": {
+				"displayOrder": 43,
+				"title": "Labels URL",
+				"type": "string"
+			},
+			"languages_url": {
+				"displayOrder": 44,
+				"title": "Languages URL",
+				"type": "string"
+			},
+			"merges_url": {
+				"displayOrder": 45,
+				"title": "Merges URL",
+				"type": "string"
+			},
+			"milestones_url": {
+				"displayOrder": 46,
+				"title": "Milestones URL",
+				"type": "string"
+			},
+			"notifications_url": {
+				"displayOrder": 47,
+				"title": "Notifications URL",
+				"type": "string"
+			},
+			"pulls_url": {
+				"displayOrder": 48,
+				"title": "Pulls URL",
+				"type": "string"
+			},
+			"releases_url": {
+				"displayOrder": 49,
+				"title": "Releases URL",
+				"type": "string"
+			},
+			"ssh_url": {
+				"displayOrder": 50,
+				"title": "SSH URL",
+				"type": "string"
+			},
+			"stargazers_url": {
+				"displayOrder": 51,
+				"title": "Stargazers URL",
+				"type": "string"
+			},
+			"statuses_url": {
+				"displayOrder": 52,
+				"title": "Statuses URL",
+				"type": "string"
+			},
+			"subscribers_url": {
+				"displayOrder": 53,
+				"title": "Subscribers URL",
+				"type": "string"
+			},
+			"subscription_url": {
+				"displayOrder": 54,
+				"title": "Subscription URL",
+				"type": "string"
+			},
+			"tags_url": {
+				"displayOrder": 55,
+				"title": "Tags URL",
+				"type": "string"
+			},
+			"teams_url": {
+				"displayOrder": 56,
+				"title": "Teams URL",
+				"type": "string"
+			},
+			"trees_url": {
+				"displayOrder": 57,
+				"title": "Trees URL",
+				"type": "string"
+			},
+			"clone_url": {
+				"displayOrder": 58,
+				"title": "Clone URL",
+				"type": "string"
+			},
+			"mirror_url": {
+				"displayOrder": 59,
+				"title": "Mirror URL",
+				"type": "string"
+			},
+			"hooks_url": {
+				"displayOrder": 60,
+				"title": "Hooks URL",
+				"type": "string"
+			},
+			"svn_url": {
+				"displayOrder": 61,
+				"title": "SVN url",
+				"type": "string"
+			},
+			"homepage": {
+				"displayOrder": 62,
+				"title": "Homepage",
+				"description": "The URL that has more information about the repository",
+				"type": "string"
+			},
+			"language": {
+				"displayOrder": 63,
+				"title": "Language",
+				"type": "string"
+			},
+			"forks_count": {
+				"displayOrder": 64,
+				"title": "Forks count",
+				"type": "number"
+			},
+			"stargazers_count": {
+				"displayOrder": 65,
+				"title": "Stargazers count",
+				"type": "number"
+			},
+			"watchers_count": {
+				"displayOrder": 66,
+				"title": "Watchers count",
+				"type": "number"
+			},
+			"size": {
+				"displayOrder": 67,
+				"title": "Size",
+				"description": "The size of the repository, which is calculated hourly. The default size is 0 when the repository is newly created.",
+				"type": "number"
+			},
+			"default_branch": {
+				"displayOrder": 68,
+				"title": "Default branch",
+				"description": "The default branch of the repository",
+				"type": "string"
+			},
+			"open_issues_count": {
+				"displayOrder": 69,
+				"title": "Open issues count",
+				"type": "number"
+			},
+			"is_template": {
+				"displayOrder": 70,
+				"title": "Is template",
+				"description": "Indicates whether the repository acts as a template that can be used to generate new repositories",
+				"type": "boolean"
+			},
+			"topics": {
+				"displayOrder": 71,
+				"title": "Topics",
+				"type": "array",
+				"items": {
+					"type": "object"
+				}
+			},
+			"has_issues": {
+				"displayOrder": 72,
+				"title": "Has issues",
+				"description": "Indicates whether issues are enabled",
+				"type": "boolean"
+			},
+			"has_projects": {
+				"displayOrder": 73,
+				"title": "Has projects",
+				"description": "Indicates whether the projects are enabled",
+				"type": "boolean"
+			},
+			"has_wiki": {
+				"displayOrder": 74,
+				"title": "Has wiki",
+				"description": "Indicates whether the wiki is enabled",
+				"type": "boolean"
+			},
+			"has_pages": {
+				"displayOrder": 75,
+				"title": "Has pages",
+				"type": "boolean"
+			},
+			"has_downloads": {
+				"displayOrder": 76,
+				"title": "Has downloads",
+				"description": "Indicates whether downloads are enabled",
+				"type": "boolean"
+			},
+			"archived": {
+				"displayOrder": 77,
+				"title": "Archived",
+				"description": "Indicates whether the repository is archived",
+				"type": "boolean"
+			},
+			"disabled": {
+				"displayOrder": 78,
+				"title": "Disabled",
+				"description": "Indicates whether the repository disabled",
+				"type": "boolean"
+			},
+			"pushed_at": {
+				"displayOrder": 79,
+				"title": "Pushed at",
+				"type": "string",
+				"format": "date-time"
+			},
+			"created_at": {
+				"displayOrder": 80,
+				"title": "Created at",
+				"type": "string",
+				"format": "date-time"
+			},
+			"updated_at": {
+				"displayOrder": 81,
+				"title": "Updated at",
+				"type": "string",
+				"format": "date-time"
+			},
+			"permissions": {
+				"displayOrder": 82,
+				"title": "Permissions",
+				"type": "object",
+				"properties": {
+					"admin": {
+						"displayOrder": 1,
+						"title": "Admin",
+						"type": "boolean"
+					},
+					"pull": {
+						"displayOrder": 2,
+						"title": "Pull",
+						"type": "boolean"
+					},
+					"triage": {
+						"displayOrder": 3,
+						"title": "Triage",
+						"type": "boolean"
+					},
+					"push": {
+						"displayOrder": 4,
+						"title": "Push",
+						"type": "boolean"
+					},
+					"maintain": {
+						"displayOrder": 5,
+						"title": "Maintain",
+						"type": "boolean"
+					}
+				},
+				"additionalProperties": false
+			},
+			"license": {
+				"displayOrder": 90,
+				"title": "License",
+				"description": "A short and simple permissive license",
+				"type": "object",
+				"properties": {
+					"key": {
+						"displayOrder": 1,
+						"title": "Key",
+						"type": "string"
+					},
+					"name": {
+						"displayOrder": 2,
+						"title": "Name",
+						"type": "string"
+					},
+					"url": {
+						"displayOrder": 3,
+						"title": "URL",
+						"type": "string"
+					},
+					"spdx_id": {
+						"displayOrder": 4,
+						"title": "SPDX ID",
+						"type": "string"
+					},
+					"node_id": {
+						"displayOrder": 5,
+						"title": "Node ID",
+						"type": "string"
+					},
+					"html_url": {
+						"displayOrder": 6,
+						"title": "HTML URL",
+						"type": "string"
+					}
+				},
+				"additionalProperties": false
+			},
+			"forks": {
+				"displayOrder": 91,
+				"title": "Forks",
+				"type": "number"
+			},
+			"open_issues": {
+				"displayOrder": 92,
+				"title": "Open issues",
+				"type": "number"
+			},
+			"watchers": {
+				"displayOrder": 93,
+				"title": "Watchers",
+				"type": "number"
+			},
+			"allow_forking": {
+				"displayOrder": 94,
+				"title": "Allow forking",
+				"description": "Indicates whether to allow forking this repo",
+				"type": "boolean"
+			},
+			"web_commit_signoff_required": {
+				"displayOrder": 95,
+				"title": "Web commit signoff required",
+				"description": "Indicates whether to require contributors to sign off on web-based commits",
+				"type": "boolean"
+			}
+		},
+		"title": "Repository",
+		"additionalProperties": false
+	},
+	"type": "array",
+	"title": "Repository"
+}
